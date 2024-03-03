@@ -1,0 +1,27 @@
+[versions]
+micronaut="4.3.4"
+kotlin="1.9.22"
+ksp="1.9.22-1.0.17"
+jib="3.4.1"
+
+[libraries]
+build-kotlin-jvm-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+build-kotlin-allopen-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-allopen", version.ref = "kotlin" }
+build-micronaut-minimal-plugin = { group = "io.micronaut.gradle", name = "micronaut-minimal-plugin", version.ref = "micronaut" }
+build-kotlin-ksp-plugin = { group = "com.google.devtools.ksp", name = "symbol-processing-gradle-plugin", version.ref = "ksp"}
+build-google-jib-plugin = { group = "com.google.cloud.tools", name = "jib-gradle-plugin", version.ref = "jib"}
+
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
+kotlin-std = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin" }
+
+
+[plugins]
+kotlinGradlePlugin =  { id = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinAllOpen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+jib = { id = "com.google.cloud.tools.jib", version.ref = "jib"}
+micronautApplication = { id = "io.micronaut.minimal.application", version.ref = "micronaut"}
+micronautLibrary = { id = "io.micronaut.minimal.library", version.ref = "micronaut"}
+micronautAot = { id = "io.micronaut.aot", version.ref = "micronaut"}
+
